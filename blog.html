@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Mi Comunidad</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <a href="index.html" class="logo">
+
+    <img
+        src="images/logo.png"
+        alt="Logo"
+    >
+
+    <span>Asociación Friky</span>
+
+</a>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="blog-hero">
+
+        <h2>Quedadas</h2>
+
+        <p>
+            Actividades y publicaciones de la comunidad.
+        </p>
+
+    </section>
+
+        <!-- POSTS -->
+
+<section class="posts-container">
+
+    <!-- POST -->
+
+    <article class="post-card">
+
+        <img
+            src="https://picsum.photos/1000/400?random=1"
+            alt="Evento"
+        >
+
+        <div class="post-info">
+
+            <h3>Quedada Gaming Alicante</h3>
+
+            <p>
+                Un resumen de la última quedada con torneos,
+                actividades y cosplay.
+            </p>
+
+            <button onclick="togglePost('post1')">
+                Leer más
+            </button>
+
+            <div class="post-expandido" id="post1">
+
+                <p>
+                    Este sábado realizamos una gran quedada
+                    en Alicante con actividades gaming,
+                    concursos y cosplay.
+                </p>
+
+                <p>
+                    También hubo talleres, juegos de mesa
+                    y sorteos para los asistentes.
+                </p>
+
+            </div>
+
+        </div>
+
+    </article>
+
+    <!-- POST -->
+
+    <article class="post-card">
+
+        <img
+            src="https://picsum.photos/1000/400?random=2"
+            alt="Evento"
+        >
+
+        <div class="post-info">
+
+            <h3>Taller de Puzles</h3>
+
+            <p>
+                Así fue el taller del sábado por la mañana.
+            </p>
+
+            <button onclick="togglePost('post2')">
+                Leer más
+            </button>
+
+            <div class="post-expandido" id="post2">
+
+                <p>
+                    Los asistentes pudieron participar
+                    en actividades colaborativas y retos.
+                </p>
+
+                <p>
+                    Fue una de las actividades más relajadas
+                    y divertidas del evento.
+                </p>
+
+            </div>
+
+        </div>
+
+    </article>
+
+</section>
+
+<script>
+
+function togglePost(id) {
+
+    const post = document.getElementById(id);
+
+    if (post.style.display === "block") {
+        post.style.display = "none";
+    }
+    else {
+        post.style.display = "block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
