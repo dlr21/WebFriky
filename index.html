@@ -63,7 +63,7 @@
     <section class="post-principal">
 
         <img 
-            src="https://picsum.photos/1200/500" 
+            src="images/grupal.webp"
             alt="Post principal"
         >
 
@@ -72,15 +72,72 @@
             <h2>SALÓN FRIKY 2026</h2>
 
             <p>
-                Este verano tendremos actividades, concursos,
-                talleres y mucho más para toda la comunidad.
+                Al igual que los buenos comics, este evento tiene segunda parte...¡Volvemos con el 2° Salón Friky de Alicante ! 💥
+                ¡Frikys reuníos!<br>
+                Otro año más con ENTRADA GRATUITA, ¡y esta vez con muchísimo más espacio! 🏛️✨<br>
+                ¿Qué encontrarás este año? 👇<br>
+                🎁 Rifa Friky.<br>
+                🎨 +80 stands de artistas.<br>
+                🕺 Zona K-pop.<br>
+                ⚔️ Zona Jugger.<br>
+                🧩 Talleres: Rol en vivo, robótica con LEGO, scape room...<br>
+                🏆 Concursos: Cosplay, Idol y K-pop.<br>
+                🛍️ Stands comerciales.<br>
+                📍 ¿Dónde? Las Cigarreras (C/ de San Carlos, 78, Alicante)<br>
+                🗓️ ¿Cuándo? 12 y 13 de junio.<br>
+                ¡Iremos revelando más sorpresas pronto! 🔥 No te lo pierdas, ¡os esperamos a todos! 👾 <br>
+                Aquí tenemos los formularios todavía activos, apúntate a vivir la experiencia con nosotros✨✨<br>
+                <div class="links-evento">
+
+                    <a href="https://forms.gle/sd6iapFayR9ndm3t6">
+                        COSPLAY
+                    </a>
+
+                    <a href="https://forms.gle/j8tQ9HtbLfcA8P3XA">
+                        IDOL
+                    </a>
+
+                    <a href="https://forms.gle/UYeha1chjteSKFmG9">
+                        KPOP
+                    </a>
+
+                    <a href="https://docs.google.com/forms/d/12wZoF8zGEDfaJDCpYLIA-aFHvFIxL-6x_dFbcChwKrM/viewform?edit_requested=true">
+                        Voluntarios
+                    </a>
+
+                </div>
+
+            </p>
+       <button onclick="togglePost('post1')">
+            Leer más
+        </button>
+
+        <div class="post-expandido" id="post1">
+
+            <p>
+                Iremos subiendo más información próximamente, nos vemos en el Salón!!
             </p>
 
-            <button>Leer más</button>
+        </div>
 
         </div>
 
     </section>
+    <script>
 
+    function togglePost(id) {
+
+        const post = document.getElementById(id);
+
+        if (post.style.display === "block") {
+            post.style.display = "none";
+        }
+        else {
+            post.style.display = "block";
+        }
+
+    }
+
+    </script>
 </body>
 </html>
