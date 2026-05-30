@@ -1,119 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog - Mi Comunidad</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- HEADER -->
 
     <header>
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Logo" />
 
-        <a href="index.html" class="logo">
+        <span>Asociación Friky</span>
+      </a>
 
-    <img
-        src="images/logo.png"
-        alt="Logo"
-    >
-
-    <span>Asociación Friky</span>
-
-</a>
-
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="blog.html">Blog</a>
-        </nav>
-
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="blog.html">Blog</a>
+      </nav>
     </header>
 
     <!-- HERO -->
 
     <section class="blog-hero">
+      <h2>Quedadas</h2>
 
-        <h2>Quedadas</h2>
-
-        <p>
-            Actividades y publicaciones de la comunidad.
-        </p>
-
+      <p>Actividades y publicaciones de la comunidad.</p>
     </section>
 
-        <!-- POSTS -->
+    <!-- POSTS -->
 
-<section class="posts-container">
+    <section class="posts-container">
+      <!-- POST -->
 
-    <!-- POST -->
-
-    <article class="post-card post-concierto">
-
-        <img 
-            src="images/concierto.jpg"
-            alt="Concierto benefico"
-        >
+      <article class="post-card post-concierto">
+        <img src="images/concierto.jpg" alt="Concierto benefico" />
 
         <div class="post-info">
+          <h3>Concierto benéfico Carolinas</h3>
 
-            <h3>Concierto benéfico Carolinas</h3>
-
-            <p>
-               ¡PLANAZO FRIKY ALERT! 🚨🎮
-
-Junto a <a class="enlace-discreto" href="https://www.instagram.com/bandascdcarolinas/">Agrupación Musical Carolinas</a> os traemos un concierto FRIKY totalmente gratuito de bandas sonoras de películas, videojuegos, superhéroes...
-            </p>
-
-
+          <p>
+            ¡PLANAZO FRIKY ALERT! 🚨🎮 Junto a
+            <a
+              class="enlace-discreto"
+              href="https://www.instagram.com/bandascdcarolinas/"
+              >Agrupación Musical Carolinas</a
+            >
+            os traemos un concierto FRIKY totalmente gratuito de bandas sonoras
+            de películas, videojuegos, superhéroes...
+          </p>
         </div>
+      </article>
 
-    </article>
+      <!-- POST -->
 
-    <!-- POST -->
-
-    <article class="post-card post-encuentros">
-
-        <img
-            src="images/ilustradores.jpg"
-            alt="Encuentro con ilustradores"
-        >
+      <article class="post-card post-encuentros">
+        <img src="images/ilustradores.jpg" alt="Encuentro con ilustradores" />
 
         <div class="post-info">
+          <h3>Encuentro con Ilustradores</h3>
 
-            <h3>Encuentro con Ilustradores</h3>
+          <p>
+            ¡𝗩𝗲𝗻 𝗮 𝗹𝗼𝘀 𝗲𝗻𝗰𝘂𝗲𝗻𝘁𝗿𝗼𝘀 con ilustradores 𝗲𝗻 𝟴𝟬𝗠𝘂𝗻𝗱𝗼𝘀! 🎨✨<br />
 
-            <p>
-¡𝗩𝗲𝗻 𝗮 𝗹𝗼𝘀 𝗲𝗻𝗰𝘂𝗲𝗻𝘁𝗿𝗼𝘀 con ilustradores 𝗲𝗻 𝟴𝟬𝗠𝘂𝗻𝗱𝗼𝘀! 🎨✨<br>
-
-Friky y el CJA te invitan a sumergirte en el universo creativo de tres grandes ilustradores 🖌<br>
-Un ciclo de encuentros únicos donde podrás conocerles, charlar con ellos y descubrir los secretos detrás de su trabajo. 💬💫<br>
-   
-            </p>
-
+            Friky y el CJA te invitan a sumergirte en el universo creativo de
+            tres grandes ilustradores 🖌<br />
+            Un ciclo de encuentros únicos donde podrás conocerles, charlar con
+            ellos y descubrir los secretos detrás de su trabajo. 💬💫<br />
+          </p>
         </div>
+      </article>
+    </section>
 
-    </article>
+    <script>
+      function togglePost(id) {
+        const post = document.getElementById(id);
 
-</section>
+        if (post.style.display === "block") {
+          post.style.display = "none";
+        } else {
+          post.style.display = "block";
+        }
+      }
 
-<script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
 
-function togglePost(id) {
+      function showSlide(index) {
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
 
-    const post = document.getElementById(id);
+        slides[index].classList.add("active");
+      }
 
-    if (post.style.display === "block") {
-        post.style.display = "none";
-    }
-    else {
-        post.style.display = "block";
-    }
+      function moveSlide(direction) {
+        currentSlide += direction;
 
-}
+        if (currentSlide >= slides.length) {
+          currentSlide = 0;
+        }
 
-</script>
+        if (currentSlide < 0) {
+          currentSlide = slides.length - 1;
+        }
 
-</body>
+        showSlide(currentSlide);
+      }
+
+      showSlide(0);
+    </script>
+  </body>
 </html>
